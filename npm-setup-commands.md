@@ -9,7 +9,7 @@ npm init
 npm init -y  # Versione automatica
 
 # Package.json con Git
-npm init -y && git init
+npm init -y && git init (da bash, powershall non prende doppio &&)
 ```
 
 ### TypeScript Base
