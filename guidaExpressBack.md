@@ -23,13 +23,29 @@ Aggiungi un file `tsconfig.json` alla root del progetto:
 ```json
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "moduleResolution": "node",
-    "target": "ES6",
-    "module": "CommonJS",
-    "strict": true
-  }
+      "strict": true,
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "target": "es6",
+      "noImplicitAny": true,
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "outDir": "./dist",
+      "baseUrl": "./",
+      "paths": {
+          "*": [
+              "node_modules/*",
+              "src/types/*"
+          ],
+          "@app/*": [
+            "src/*"
+          ]
+      }
+  },
+  "include": [
+      "src/**/*"
+  ]
 }
 ```
 
